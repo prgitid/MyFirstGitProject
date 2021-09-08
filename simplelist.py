@@ -1,12 +1,9 @@
-fruits = ["banana","apple","mango"]
-#print(fruits)
-#print(fruits[0])
-#print(fruits[1])
-#for i in fruits:
-    #print(i)
-fruits.append("orange")
-print(fruits)
-fruits.insert(1,"Cherry")
-print(fruits)
-
-
+mylist = [2]*5
+print(mylist)
+mylist2=[4,6,8,10,12]
+newlist = mylist + mylist2
+print(newlist)
+print(len(newlist))
+newlist.remove(2)
+print(newlist)
+print(id(newlist))
