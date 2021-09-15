@@ -9,3 +9,11 @@ print(list3)
 #Reversing the list with step index of 2
 list4 = n[10::-2]
 print(list4)
+#Reversing the list with reverse
+list5=list4.reverse()
+print(list5)
+#Accessing the elements of reversed list
+for k in reversed(n):
+    print(k)
+for o in dir(n):
+    print(o)
