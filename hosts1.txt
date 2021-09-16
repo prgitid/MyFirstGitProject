@@ -1,0 +1,9 @@
+localhost
+www.google.com
+8.8.8.8
+8.8.4.4
+www.netflix.com
+www.aws.amazon.com
+www.amazon.com
+www.yahoo.com
+www.msn.com
