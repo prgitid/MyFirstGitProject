@@ -3,6 +3,7 @@ import os
 import datetime
 today = datetime.datetime.today()
 filename = open('hosts1.txt','r')
+#Using str for printing date in string format.
 f = open('hoststatus_'+str(today)+'.txt','w')
 lines = filename.readlines()
 for line in lines:
