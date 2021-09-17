@@ -1,17 +1,14 @@
 
-#Program for pinging the provided hostname or IP address with subprocess.
+#Program for pinging the hosts from file hosts1.txt
 import subprocess
-hostname=input("Enter IP Address or Website : ")
-response = subprocess.Popen(["ping","-c","1",hostname.rstrip()],stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
-
-#Program for pinging localhost with subprocess.
-#import subprocess
-#response = subprocess.Popen(["ping","-c","1","localhost"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
-
-stdout,stderr = response.communicate()
+filename = open('hosts1.txt','r')
+lines = filename.readlines()
+for line in lines:
+    response = subprocess.Popen(["ping","-c","1",line.rstrip()],stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+    stdout,stderr = response.communicate()
 #print(stdout)
 #print(stderr)
-if (response.returncode==0):
-    status = print(hostname.rstrip() + " is reachable")
-else:
-    status = print(hostname.rstrip() + " is not reachable")
+    if (response.returncode==0):
+        status = print(line.rstrip() + " is reachable")
+    else:
+        status = print(line.rstrip() + " is not reachable")
