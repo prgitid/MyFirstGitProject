@@ -1,10 +1,11 @@
-#Reading list of Hostnames from hosts1.txt and printing ping response in different lines to hoststatus.txt
+#Reading list of Hostnames from hosts1.txt and printing ping response in different lines to filename with timedate
 import os
 import datetime
-today = datetime.datetime.today()
+#using strftime for printime timestamp in format dd mm yy hour and second..
+today = datetime.datetime.today().strftime("%d-%m-%Y %H:%M")
 filename = open('hosts1.txt','r')
-#Using str for printing date in string format.
-f = open('hoststatus_'+str(today)+'.txt','w')
+#concatenating filename with script running date
+f = open('hoststatus_'+today+'.txt','w')
 lines = filename.readlines()
 for line in lines:
     response = os.system("ping -c 1 "+ line)
