@@ -1,12 +1,16 @@
 import subprocess
 # defining ips in range of 192.168.1.1 to 1.10
-ips = ["192.168.0.{}".format(i) for i in range(1,11)]
+
+filename=open("hosts1.txt","r")
+f = open("hoststatus.txt","w")
 def ping(host):
+
     #Using subprocess run
-    ping_reply= subprocess.Popen(["ping","-c","1",host],stderr=subprocess.PIPE,stdout=subprocess.PIPE,text=True)
+    ping_reply= subprocess.Popen(["ping","-c","3",host.rstrip()],stderr=subprocess.PIPE,stdout=f,text=True)
     print(ping_reply.returncode)
     print(ping_reply.communicate()[0])
 
-for ip in ips:
-    print(ping(ip))
+for line in filename:
+    ping(line)
+
 
