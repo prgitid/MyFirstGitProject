@@ -29,4 +29,8 @@ import subprocess
 #print(p4.returncode)
 
 #With check=True, python will throw exception error in console.
-p5 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True,check=True)
+#p5 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True,check=True)
+
+# stderr=subprocess.DEVNULL perform same function as Capture_output = True . No out to console if print stderr.
+p6 = subprocess.run(['ls','-al','dne'],stderr=subprocess.DEVNULL)
+print(p6.stderr)
