@@ -18,12 +18,12 @@ import subprocess
 #Without print p2.stdout, no output is shown in console.
 #print(p3.stdout)
 # Writing the output of cmd to to text file..
-with open('output.txt','w') as newfile:
-    p3=subprocess.run(['ls','-al'],stdout=newfile,text=True)
-    newfile.close()
+#with open('output.txt','w') as newfile:
+ #   p3=subprocess.run(['ls','-al'],stdout=newfile,text=True)
+  #  newfile.close()
 # Capture Error output if dir doesn't exist but no output to console
-#p4 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True)
-# capture returncode as 1 if error is ther.
+p4 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True)
+# capture returncode as 1 if error exist
 #print(p4.returncode)
 #capture error in console.
 #print(p4.stderr)
