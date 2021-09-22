@@ -16,7 +16,7 @@ p2 = subprocess.run(['ls','-al'],capture_output=True)
 # stdout=subprocess.PIPE will perform same function of capture_output=True
 #p2 = subprocess.run(['ls','-al'],stdout=subprocess.PIPE,text=True)
 #Without print p2.stdout, no output is shown in console.
-#print(p2.stdout)
+print(p2.stdout)
 # Writing the output of cmd to to text file..
 #with open('output.txt','w') as newfile:
  #   p3=subprocess.run(['ls','-al'],stdout=newfile,text=True)
