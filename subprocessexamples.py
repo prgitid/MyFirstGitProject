@@ -8,15 +8,15 @@ import subprocess
 #print(p1.args[0])
 #print(p1.args[1])
 #print(p1.returncode)
-p2 = subprocess.run(['ls','-al'],capture_output=True,text=True)
+#p2 = subprocess.run(['ls','-al'],capture_output=True,text=True)
 # With Capture_output = True & No p2.stdout ,will not show any output to console.
 #With capture_output = True & p2.stdout will show out in binary.
 # With capture_output = True, p2.stdout.decode will show the output to console in text form.
 # With capture_output = True & text = True, p1.stdout will show the output in text or string form.
 # stdout=subprocess.PIPE will perform same function of capture_output=True
-#p2 = subprocess.run(['ls','-al'],stdout=subprocess.PIPE,text=True)
+p3 = subprocess.run(['ls','-al'],stdout=subprocess.PIPE,text=True)
 #Without print p2.stdout, no output is shown in console.
-print(p2.stdout)
+print(p3.stdout)
 # Writing the output of cmd to to text file..
 #with open('output.txt','w') as newfile:
  #   p3=subprocess.run(['ls','-al'],stdout=newfile,text=True)
