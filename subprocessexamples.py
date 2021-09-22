@@ -1,9 +1,13 @@
 import subprocess
 
 p1 = subprocess.run(['ls','-al'])
-print(p1)
-#print(p1.args[0])
-#print(p1.returncode)
+#Print the output of ls-al in the console with args and returncode status with subprocess run.
+#print(p1)
+#Print the output in the console with args & returncode only with subprocess run.
+print(p1.args)
+print(p1.args[0])
+print(p1.args[1])
+print(p1.returncode)
 # With Capture_output = True & No p1.stdout ,will not show any output to console.
 #With capture_output = True & p1.stdout will show out in binary.
 # With capture_output = True, p1.stdout.decode will show the output to console in text form.
