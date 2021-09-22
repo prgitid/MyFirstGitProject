@@ -22,12 +22,11 @@ import subprocess
  #   p3=subprocess.run(['ls','-al'],stdout=newfile,text=True)
   #  newfile.close()
 # Capture Error output if dir doesn't exist but no output to console
-p4 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True)
+#p4 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True)
 #print stderr output to console..
 #print(p4.stderr)
 #capture returncode as 1 if error exist
-print(p4.returncode)
-#capture error in console.
-#print(p4.stderr)
+#print(p4.returncode)
+
 #With check=True, python will throw exception error in console.
-#p5 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True,check=True)
+p5 = subprocess.run(['ls','-al','dne'],capture_output=True,text=True,check=True)
