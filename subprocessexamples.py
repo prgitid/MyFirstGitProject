@@ -1,7 +1,6 @@
 import subprocess
 
 p1 = subprocess.run(['ls','-al'])
-#Print the output of ls-al in the console with args and returncode status.
 print(p1)
 #print(p1.args[0])
 #print(p1.returncode)
