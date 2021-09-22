@@ -8,7 +8,7 @@ import subprocess
 #print(p1.args[0])
 #print(p1.args[1])
 #print(p1.returncode)
-p2 = subprocess.run(['ls','-al'],capture_output=True)
+p2 = subprocess.run(['ls','-al'],capture_output=True,text=True)
 # With Capture_output = True & No p2.stdout ,will not show any output to console.
 #With capture_output = True & p2.stdout will show out in binary.
 # With capture_output = True, p2.stdout.decode will show the output to console in text form.
